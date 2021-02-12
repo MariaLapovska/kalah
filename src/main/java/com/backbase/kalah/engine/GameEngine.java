@@ -80,7 +80,7 @@ public class GameEngine {
         int playerStorePitId = gameState == GameState.PLAYER_1 ? halfBoardSize : boardSize;
         int opponentStorePitId = gameState == GameState.PLAYER_1 ? boardSize : halfBoardSize;
 
-        log.debug("Moving '{}' stones from pit '{}' for game '{}'", stonesNum, game.getId(), pitId);
+        log.debug("Moving '{}' stones from pit '{}' for game '{}'", stonesNum, pitId, game.getId());
 
         int i = incrementPitId(pitId, opponentStorePitId);
         while (stonesNum > 1) {
@@ -173,7 +173,7 @@ public class GameEngine {
         int totalStonesNum = 0;
 
         while (pitId < storeId) {
-            totalStonesNum += board.get(pitId);
+            totalStonesNum += Optional.ofNullable(board.put(pitId, 0)).orElse(0);
             pitId++;
         }
 
