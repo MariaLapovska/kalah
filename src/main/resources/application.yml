@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: kalah
+
+  datasource:
+    url: jdbc:h2:mem:kalahdb
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: ${PORT:8080}
+
+kalah:
+  protocol: ${PROTOCOL:http}
+  host: ${HOST:localhost}
+  game-path: ${GAME_PATH:games}
+  stones-num: ${STONES_NUM:6}
+  board-size: ${BOARD_SIZE:14}
+  game-link-template: ${kalah.protocol}://${kalah.host}:${server.port}/${kalah.game-path}
