@@ -30,7 +30,7 @@ them and puts them in his/hers Kalah. The winner of the game is the player who h
 
 ## Run
 
-To build the project execute this command while in [kalah](../kalah) folder:
+To build the project execute this command while in project's root folder (`kalah`):
 
 ```bash
 mvn clean install -DskipTests
@@ -44,7 +44,7 @@ java -jar target/kalah-0.0.1-SNAPSHOT.jar
 
 By default, the application will start on the `8080` port.
 
-Alternatively, you can run the project in docker container using [Dockerfile](../kalah/Dockerfile) with the following commands:
+Alternatively, you can run the project in docker container using [Dockerfile](./Dockerfile) with the following commands:
 
 ```
 docker build -t kalah .
@@ -53,7 +53,7 @@ docker run run -p 8080:8080 kalah
 
 ## API docs
 
-Swagger UI is available by this link - [Swagger UI](http://localhost:8080/swagger-ui/#)
+Once you've started the app, Swagger UI is available by this link - http://localhost:8080/swagger-ui/#
 
 ## Parameters
 
