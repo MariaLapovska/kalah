@@ -48,7 +48,7 @@ Alternatively, you can run the project in docker container using [Dockerfile](./
 
 ```
 docker build -t kalah .
-docker run run -p 8080:8080 kalah
+docker run -p 8080:8080 kalah
 ```
 
 ## API docs
